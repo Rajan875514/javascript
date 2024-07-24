@@ -53,21 +53,63 @@
 //     }
 //     console.log(row);  // Print the row
 // }
+// let num = prompt("Enter the number");
+// num = parseInt(num);  // Convert the input to an integer
+
+// for (let i = num; i > 0; i--) {
+//     let row = "";  // Initialize an empty string for each row
+    
+//     // Add leading spaces
+//     for (let j = 0; j < num - i; j++) {
+//         row += " ";
+//     }
+    
+//     // Add the asterisks
+//     for (let j = 0; j < i; j++) {
+//         row += "*";
+//     }
+    
+//     console.log(row);  // Print the row
+// }
+  // print thoe trainge of esrikes
+
+//   let num = prompt("Enter the number");
+// num = parseInt(num);  // Convert the input to an integer
+
+// for (let i = 1; i <= num; i++) {
+//     let row = "";  // Initialize an empty string for each row
+    
+//     // Add leading spaces to center-align the triangle
+//     for (let j = 0; j < num - i; j++) {
+//         row += " ";
+//     }
+    
+//     // Add asterisks
+//     for (let j = 0; j < 2 * i - 1; j++) {
+//         row += "*";
+//     }
+    
+//     console.log(row);  // Print the row
+// }
+// print the inverdwt of  write traingel 
 let num = prompt("Enter the number");
 num = parseInt(num);  // Convert the input to an integer
 
 for (let i = num; i > 0; i--) {
     let row = "";  // Initialize an empty string for each row
     
-    // Add leading spaces
+    // Add leading spaces to center-align the triangle
     for (let j = 0; j < num - i; j++) {
         row += " ";
     }
     
-    // Add the asterisks
-    for (let j = 0; j < i; j++) {
+    // Add asterisks
+    for (let j = 0; j < 2 * i - 1; j++) {
         row += "*";
     }
     
     console.log(row);  // Print the row
 }
+
+
+    

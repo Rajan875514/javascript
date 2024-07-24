@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="17_styelprojectDom.css">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: rgb(35, 168, 212);
+        }
+        .box {
+            width: 250px;
+            height: auto;
+            background-color: gainsboro;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .box h1 {
+            font-size: 25px;
+            margin: 10px 0;
+        }
+        .box h5 {
+            font-size: 18px;
+            color: red;
+            margin: 5px 0;
+        }
+        .box #btn-container {
+            margin-top: 10px;
+        }
+        .box button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: salmon;
+            color: rgb(45, 42, 42);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .box button:hover {
+            background-color: rgb(31, 203, 68);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="image.png" alt="Profile Image">
+        <h1>Rajan Malhotra</h1>
+        <h5>Stranger</h5>
+        <div id="btn-container">
+            <button id="remove">Remove</button>
+            <button id="add">Add Frind</button>
+        </div>
+    </div>
+    <script src="17_domUsedProject.js"></script>
+</body>
+</html>
