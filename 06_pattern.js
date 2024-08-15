@@ -1,115 +1,94 @@
 //prints both the asterisks and the row and column indexes:
-//let num = prompt("Enter the number");                                
-// num = parseInt(num);  // Convert the input to an integer
+// const readline = require('readline');
 
-// for (let i = 0; i < num; i++) {                                          * * * * *
-//     let row = "";  // Initialize an empty string for each row             * * * * *
-//     for (let j = 0; j < num; j++) {                                       * * * * *
-//         row += "*";  // Append an asterisk to the row
-//     }
-//     console.log(`Row ${i + 1}: ${row}`);  // Print the row with its index
-// }
-      
-// To print a left half triangle of asterisks,
+// const x = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout,
+// });
 
-// let num = prompt("Enter the number");
-// num = parseInt(num);  // Convert the input to an integer             *
-                                                   //                   *
-// for (let i = 0; i < num; i++) {
-//     let row = "";  // Initialize an empty string for each row
-//     for (let j = 0; j <= i; j++) {
-//         row += "*";  // Append an asterisk to the row
-//     }
-//     console.log(row);  // Print the row
-// 
-// To print a wrirte half triangle of asterisks,
+// x.question('Enter the number of asterisks per row: ', (inputnumber) => {                          
+//     const number = parseInt(inputnumber, 10);  // Convert the input to an integer
 
-// let num = prompt("Enter the number");
-// num = parseInt(num);  // Convert the input to an integer
+//     for (let i = 0; i < number; i++) {                                          
+//         let row = ""; 
+//         // Initialize an empty string for each row  
+//         for (let j = 0; j < number; j++) {                                      
+//             row += "*";  // Append an asterisk to the row
+//         }
+//         console.log(`Row ${i + 1}: ${row}`);  // Print the row with its index
+//     }
 
-// for (let i = 0; i < num; i++) {
-//     let row = "";  // Initialize an empty string for each row
-    
-//     // Add spaces before the asterisks
-//     for (let j = 0; j < num - i - 1; j++) {
-//         row += " ";
-//     }
-    
-//     // Add the asterisks
-//     for (let j = 0; j <= i; j++) {
-//         row += "*";
-//     }
-    
-//     console.log(row);  // Print the row
-//}
+//     x.close();  // Close the readline interface
+// });
 
-// let num = prompt("Enter the number");
-// num = parseInt(num);  // Convert the input to an integer
-                                                            
-// for (let i = num; i > 0; i--) {                         
-//     let row = "";  // Initialize an empty string for each row
-//     for (let j = 0; j < i; j++) {
-//         row += "*";  // Append an asterisk to the row
-//     }
-//     console.log(row);  // Print the row
-// }
-// let num = prompt("Enter the number");
-// num = parseInt(num);  // Convert the input to an integer
 
-// for (let i = num; i > 0; i--) {
-//     let row = "";  // Initialize an empty string for each row
-    
-//     // Add leading spaces
-//     for (let j = 0; j < num - i; j++) {
-//         row += " ";
-//     }
-    
-//     // Add the asterisks
-//     for (let j = 0; j < i; j++) {
-//         row += "*";
-//     }
-    
-//     console.log(row);  // Print the row
-// }
-  // print thoe trainge of esrikes
 
-//   let num = prompt("Enter the number");
-// num = parseInt(num);  // Convert the input to an integer
 
-// for (let i = 1; i <= num; i++) {
-//     let row = "";  // Initialize an empty string for each row
-    
-//     // Add leading spaces to center-align the triangle
-//     for (let j = 0; j < num - i; j++) {
-//         row += " ";
-//     }
-    
-//     // Add asterisks
-//     for (let j = 0; j < 2 * i - 1; j++) {
-//         row += "*";
-//     }
-    
-//     console.log(row);  // Print the row
-// }
-// print the inverdwt of  write traingel 
-let num = prompt("Enter the number");
-num = parseInt(num);  // Convert the input to an integer
 
-for (let i = num; i > 0; i--) {
-    let row = "";  // Initialize an empty string for each row
-    
-    // Add leading spaces to center-align the triangle
-    for (let j = 0; j < num - i; j++) {
-        row += " ";
+
+
+// off pumrid number 
+// const readline = require('readline');
+
+// const x = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout,
+// });
+
+// x.question('Enter the number of rows for the pyramid: ', (inputnumber) => {
+//     const numberOfRows = parseInt(inputnumber, 10);  // Convert the input to an integer
+//      // Generate the left-aligned triangle
+//      let n = 5;
+//      for (let i = 1; i <= n; i++) {
+//          let str = '';
+//          let count = 1;
+//          for (let j = 1; j <= 2 * n; ++j) {
+//              if (i + j >= n + 1 && (i >= j - n + 1)) {
+//                  // Add a space after each number
+//                  str += count.toString() + ' ';
+//                  count++;
+//              } else {
+//                  // Add two spaces for the gap
+//                  str += ' ';
+//              }
+//          }
+     
+//          console.log(str);
+//      }
+     
+//         // Print the row
+//         console.log(row);
+//     }
+
+//     x.close();  // Close the readline interface after the loop is done
+// });
+const readline = require('readline');
+
+const x = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+x.question('Enter the number of rows for the pyramid: ', (inputnumber) => {
+    const numberOfRows = parseInt(inputnumber, 10);  // Convert the input to an integer
+
+    // Generate the left-aligned triangle
+    for (let i = 1; i <= numberOfRows; i++) {
+        let str = '';
+        let count = 1;
+        for (let j = 1; j <= 2 * numberOfRows; ++j) {
+            if (i + j >= numberOfRows + 1 && (i >= j - numberOfRows + 1)) {
+                // Add a space after each number
+                str += count.toString() + ' ';
+                count++;
+            } else {
+                // Add two spaces for the gap
+                str += '  ';  // Two spaces to align with the numbers
+            }
+        }
+        // Print the row
+        console.log(str);
     }
-    
-    // Add asterisks
-    for (let j = 0; j < 2 * i - 1; j++) {
-        row += "*";
-    }
-    
-    console.log(row);  // Print the row
-}
 
-
-    
+    x.close();  // Close the readline interface after the loop is done
+});
